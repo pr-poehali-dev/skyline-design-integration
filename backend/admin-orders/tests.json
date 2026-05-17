@@ -1,0 +1,21 @@
+{
+  "tests": [
+    {
+      "name": "Get orders without auth",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 401,
+      "bodyMatcher": "partial",
+      "expectedBody": {}
+    },
+    {
+      "name": "Create order",
+      "method": "POST",
+      "path": "/",
+      "body": {"customer_name": "Иван", "customer_phone": "+79001234567", "message": "Нужна запчасть"},
+      "expectedStatus": 201,
+      "bodyMatcher": "partial",
+      "expectedBody": {}
+    }
+  ]
+}

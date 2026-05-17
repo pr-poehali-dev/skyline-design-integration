@@ -1,0 +1,21 @@
+{
+  "tests": [
+    {
+      "name": "Check me unauthorized",
+      "method": "GET",
+      "path": "/me",
+      "expectedStatus": 401,
+      "bodyMatcher": "partial",
+      "expectedBody": {}
+    },
+    {
+      "name": "Login with wrong credentials",
+      "method": "POST",
+      "path": "/login",
+      "body": {"username": "wrong", "password": "wrong"},
+      "expectedStatus": 401,
+      "bodyMatcher": "partial",
+      "expectedBody": {}
+    }
+  ]
+}

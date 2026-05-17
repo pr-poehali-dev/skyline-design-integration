@@ -1,0 +1,20 @@
+{
+  "tests": [
+    {
+      "name": "Get products list",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200,
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Create product without auth",
+      "method": "POST",
+      "path": "/",
+      "body": {"name": "Тест"},
+      "expectedStatus": 401,
+      "bodyMatcher": "partial",
+      "expectedBody": {}
+    }
+  ]
+}
